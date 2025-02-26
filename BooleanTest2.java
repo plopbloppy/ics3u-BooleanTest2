@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class BooleanTest2 {
     public static void main(String[] args) throws Exception {
         Scanner keyboard = new Scanner(System.in);
+        
         System.out.println("Please enter input A:");
         boolean a = keyboard.nextBoolean();
         System.out.println("Please enter input B:");
@@ -13,7 +14,7 @@ public class BooleanTest2 {
         boolean d  = keyboard.nextBoolean();
         keyboard.close();
         
-        boolean output = !(b && !d) && !((!b && !c && d) || !(a && c && !d));
+        boolean output = (b && !d) || (!b && !c && d) || !(a && b && c) || (a && c && !d);
         System.out.println("The output is: " + output);
     }
 }
